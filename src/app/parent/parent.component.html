@@ -1,0 +1,7 @@
+<mat-card>
+    <mat-icon (click)="togglePopover($event)">info</mat-icon>
+    <ng-container *ngIf="isPopoverVisible">
+      <app-popover #popover [message]="popoverMessage"></app-popover>
+    </ng-container>
+  </mat-card>
+  
