@@ -14,7 +14,11 @@ import { CommonModule } from '@angular/common';
 })
 export class ParentComponent {
   isPopoverVisible = false;
-  popoverMessage = 'This is a premium feature for subscribers.';
+  popoverMessage =
+    `Information on the form is out of date\n
+    The following fields have changed:\n
+    Field | New Data  |   Form\n
+    Age       13           22 \n`;
 
   constructor(private renderer: Renderer2, private elRef: ElementRef) {}
 

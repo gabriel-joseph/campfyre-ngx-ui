@@ -1,4 +1,28 @@
 <div class="popover" (click)="$event.stopPropagation()">
-    <p>{{ message }}</p>
+  <div class="modal">
+    <h3>Form information is outdated</h3>
+    <p>The following fields now have new values:</p>
+
+    <table class="update-table">
+      <thead>
+        <tr>
+          <th class="header">Field</th>
+          <th class="header">Current Value</th>
+          <th class="header">Form Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let change of fieldChanges">
+          <td>{{ change.field }}</td>
+          <td>{{ change.current }}</td>
+          <td>{{ change.new }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>To update the form with the latest data, press "Cancel".</p>
+    <p>
+      Submitting the form in the current state will overwrite data.
+    </p>
   </div>
-  
+</div>
